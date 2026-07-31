@@ -1,10 +1,14 @@
+import PageContent from "../layouts/PageContent";
+
 function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
-      <h1 className="text-5xl font-bold text-blue-600">
-        NextG E-Commerce 🚀
-      </h1>
-    </div>
+    <PageContent>
+      <section className="flex h-[80vh] items-center justify-center">
+        <h1 className="text-5xl font-bold">
+          Home Page
+        </h1>
+      </section>
+    </PageContent>
   );
 }
 
