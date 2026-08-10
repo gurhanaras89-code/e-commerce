@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Hero from "../components/Hero/Hero";
+import EditorPick from "../components/EditorPick/EditorPick";
 
 function PageContent() {
   return (
@@ -9,6 +10,7 @@ function PageContent() {
 
       <main className="flex-1">
         <Hero />
+        <EditorPick />
       </main>
 
       <Footer />

@@ -10,44 +10,46 @@ import {
 
 function TopBar() {
   return (
-    <div className="hidden bg-[#252B42] text-white lg:block">
-      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6 text-sm">
+    <div className="bg-[#252B42] text-white">
+      <div
+        className="flex h-14 w-full items-center justify-between text-sm"
+        style={{
+          maxWidth: "1280px",
+          margin: "0 auto",
+        }}
+      >
 
-        {/* Left */}
-        <div className="flex items-center gap-8 font-semibold">
+        {/* Sol taraf */}
+        <div className="flex items-center gap-6 font-semibold">
           <div className="flex items-center gap-2">
-            <FaPhoneAlt />
+            <FaPhoneAlt size={14} />
             <span>(225) 555-0118</span>
           </div>
 
           <div className="flex items-center gap-2">
-            <FaEnvelope />
-            <span>michelle.rivera@example.com</span>
+            <FaEnvelope size={14} />
+            <span>a@example.com</span>
           </div>
         </div>
 
-        {/* Center */}
+        {/* Orta */}
         <p className="font-semibold">
           Follow Us and get a chance to win 80% off
         </p>
 
-        {/* Right */}
+        {/* Sağ taraf */}
         <div className="flex items-center gap-4">
-
-          <span className="font-semibold">
-            Follow Us :
-          </span>
+          <span className="font-semibold">Follow Us :</span>
 
           <FaInstagram className="cursor-pointer" />
           <FaYoutube className="cursor-pointer" />
           <FaFacebookF className="cursor-pointer" />
           <FaTwitter className="cursor-pointer" />
 
-          <div className="ml-6 flex items-center gap-2 font-semibold cursor-pointer">
+          <div className="flex items-center gap-2 ml-2 cursor-pointer font-semibold">
             <FaUser />
-            <span>Login / Register</span>
+            <span className="cursor-pointer">Login / Register</span>
           </div>
-
         </div>
 
       </div>
