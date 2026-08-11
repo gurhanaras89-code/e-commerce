@@ -1,3 +1,28 @@
 @import "tailwindcss";
 @import "./styles/globals.css";
 @import "./styles/variables.css";
+
+.footer-title {
+  margin: 0 0 18px;
+  color: #252B42;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  width: 100%;
+}
+
+.footer-links span {
+  display: block !important;
+  width: 100%;
+  color: #737373;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  white-space: nowrap;
+}
