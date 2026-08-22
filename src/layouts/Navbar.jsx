@@ -8,69 +8,79 @@ import { FaChevronDown } from "react-icons/fa6";
 
 function Navbar() {
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white">
       <div
-        className="flex h-[86px] w-full items-center justify-between"
+        className="flex items-center justify-between px-6 lg:px-0"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1050px",
           margin: "0 auto",
+          height: "58px",
         }}
       >
-
-        {/* Logo */}
+        {/* LOGO */}
         <h1 className="text-[24px] font-bold text-[#252B42]">
           Bandage
         </h1>
 
-        {/* Menü */}
-        <ul className="hidden lg:flex items-center gap-10 text-[15px] font-semibold text-[#252B42]">
-          <li className="cursor-pointer hover:text-[#23A6F0]">
+        {/* MENU */}
+        <ul className="hidden lg:flex items-center gap-6 text-[14px] font-semibold text-[#737373]">
+          <li className="cursor-pointer hover:text-[#252B42]">
             Home
           </li>
 
-          <li className="flex items-center gap-2 cursor-pointer hover:text-[#23A6F0]">
+          <li className="flex items-center gap-1 cursor-pointer hover:text-[#252B42]">
             Shop
             <FaChevronDown size={10} />
           </li>
 
-          <li className="cursor-pointer hover:text-[#23A6F0]">
+          <li className="cursor-pointer hover:text-[#252B42]">
             About
           </li>
 
-          <li className="cursor-pointer hover:text-[#23A6F0]">
+          <li className="cursor-pointer hover:text-[#252B42]">
+            Blog
+          </li>
+
+          <li className="cursor-pointer hover:text-[#252B42]">
             Contact
           </li>
 
-          <li className="cursor-pointer hover:text-[#23A6F0]">
+          <li className="cursor-pointer hover:text-[#252B42]">
             Pages
           </li>
         </ul>
 
-        {/* Sağ ikonlar */}
-        <div className="flex items-center gap-6 text-[#23A6F0]">
+        {/* SAĞ TARAF */}
+        <div className="flex items-center gap-5 text-[#23A6F0]">
 
-          <FaUser
-            size={18}
-            className="cursor-pointer"
-          />
+          {/* LOGIN / REGISTER */}
+          <div className="flex items-center gap-2 cursor-pointer">
+            <FaUser size={15} />
 
-          <FaSearch
-            size={19}
-            className="cursor-pointer"
-          />
-
-          <div className="flex items-center gap-1 cursor-pointer">
-            <FaShoppingCart size={19} />
-            <span className="text-sm">1</span>
+            <span className="text-[14px] font-semibold whitespace-nowrap">
+              Login / Register
+            </span>
           </div>
 
+          {/* SEARCH */}
+          <FaSearch
+            size={17}
+            className="cursor-pointer"
+          />
+
+          {/* CART */}
           <div className="flex items-center gap-1 cursor-pointer">
-            <FaHeart size={19} />
-            <span className="text-sm">1</span>
+            <FaShoppingCart size={17} />
+            <span className="text-[12px]">1</span>
+          </div>
+
+          {/* FAVORITES */}
+          <div className="flex items-center gap-1 cursor-pointer">
+            <FaHeart size={17} />
+            <span className="text-[12px]">1</span>
           </div>
 
         </div>
-
       </div>
     </nav>
   );
