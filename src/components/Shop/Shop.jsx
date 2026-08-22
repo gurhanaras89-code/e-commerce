@@ -2,6 +2,7 @@ import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
 import "./Shop.css";
 
+
 const categories = [
   { image: "/src/assets/images/shop1.png", title: "CLOTHS", items: "5 Items" },
   { image: "/src/assets/images/shop2.png", title: "CLOTHS", items: "5 Items" },
@@ -141,19 +142,39 @@ function Shop() {
         </div>
       </section>
 
-      {/* BRANDS */}
-      <section className="brands-section">
-        <div className="shop-container brands">
+ {/* BRANDS */}
+<section className="brands-section">
+  <div className="shop-container brands">
 
-          <span>Hooli</span>
-          <span>Lyft</span>
-          <span>⚡</span>
-          <span>stripe</span>
-          <span>aws</span>
-          <span>● reddit</span>
+    <div className="brand brand-hooli">
+      <span>Hooli</span>
+    </div>
 
-        </div>
-      </section>
+    <div className="brand brand-lyft">
+      <span>lyft</span>
+    </div>
+
+    <div className="brand brand-bird">
+      <span className="bird-wing">◢</span>
+      <span className="bird-wing bird-wing-2">◣</span>
+    </div>
+
+    <div className="brand brand-stripe">
+      <span>stripe</span>
+    </div>
+
+    <div className="brand brand-aws">
+      <span>aws</span>
+      <small>⌒</small>
+    </div>
+
+    <div className="brand brand-reddit">
+      <span className="reddit-dot">●</span>
+      reddit
+    </div>
+
+  </div>
+</section>
 
     </main> 
     <Footer />

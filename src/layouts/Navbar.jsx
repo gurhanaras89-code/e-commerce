@@ -5,6 +5,7 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -24,14 +25,16 @@ function Navbar() {
 
         {/* MENU */}
         <ul className="hidden lg:flex items-center gap-6 text-[14px] font-semibold text-[#737373]">
-          <li className="cursor-pointer hover:text-[#252B42]">
-            Home
-          </li>
+          <li className="cursor-pointer hover:text-[#23A6F0]">
+  <Link to="/">Home</Link>
+</li>
 
-          <li className="flex items-center gap-1 cursor-pointer hover:text-[#252B42]">
-            Shop
-            <FaChevronDown size={10} />
-          </li>
+          <li className="flex items-center gap-2 cursor-pointer hover:text-[#23A6F0]">
+  <Link to="/shop" className="flex items-center gap-2">
+    Shop
+    <FaChevronDown size={10} />
+  </Link>
+</li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
             About

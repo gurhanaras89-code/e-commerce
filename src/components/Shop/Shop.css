@@ -506,30 +506,189 @@
    BRANDS
 ========================================================= */
 
+/* =========================
+   BRANDS
+========================= */
+
 .brands-section {
   width: 100%;
-
-  padding: 45px 0;
-
   background: #fafafa;
+  padding: 42px 0;
+  margin-top: 0;
 }
 
-.brands {
+.shop-container.brands {
+  width: calc(100% - 80px);
+  max-width: 1045px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  gap: 40px;
+  gap: 60px;
 }
 
-.brands span {
+.brand {
   color: #737373;
-
-  font-size: 22px;
-  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
   font-weight: 700;
+  line-height: 1;
 }
 
+/* Hooli */
+/* =========================
+   BRANDS
+========================= */
+
+.brands-section {
+  width: 100%;
+  background: #fafafa;
+  padding: 42px 0;
+  margin-top: 20px;
+}
+
+.brands {
+  width: calc(100% - 80px);
+  max-width: 1050px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.brand {
+  flex: 1;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #737373;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Hooli */
+.brand-hooli span {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* Lyft */
+.brand-lyft span {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+/* Üçüncü logo */
+.brand-bird {
+  position: relative;
+  width: 70px;
+  height: 50px;
+}
+
+.brand-bird .bird-wing {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+
+  font-size: 45px;
+  transform: rotate(-25deg);
+
+  color: #737373;
+}
+
+.brand-bird .bird-wing-2 {
+  left: 30px;
+  top: 15px;
+
+  font-size: 30px;
+  transform: rotate(20deg);
+}
+
+/* Stripe */
+.brand-stripe span {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* AWS */
+.brand-aws {
+  position: relative;
+
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.brand-aws small {
+  position: absolute;
+
+  left: 3px;
+  bottom: -14px;
+
+  font-size: 32px;
+  font-weight: 400;
+
+  transform: rotate(-8deg);
+}
+
+/* Reddit */
+.brand-reddit {
+  font-size: 28px;
+  font-weight: 700;
+  gap: 3px;
+}
+
+.brand-reddit .reddit-dot {
+  font-size: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .brands {
+    gap: 25px;
+  }
+
+  .brand-hooli span,
+  .brand-lyft span,
+  .brand-stripe span {
+    font-size: 26px;
+  }
+
+  .brand-aws {
+    font-size: 24px;
+  }
+
+  .brand-reddit {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .brands {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .brand {
+    height: 55px;
+  }
+}
 
 /* =========================================================
    TABLET
