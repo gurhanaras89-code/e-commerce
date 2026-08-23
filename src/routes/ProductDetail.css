@@ -1,0 +1,400 @@
+/* =========================================
+   PRODUCT DETAIL
+========================================= */
+
+.product-detail-page {
+  background: #fff;
+  color: #252b42;
+}
+
+/* Genel genişlik */
+.product-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.product-breadcrumb {
+  background: #fff;
+  padding: 25px 0;
+}
+
+.product-breadcrumb .product-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-breadcrumb a {
+  text-decoration: none;
+  color: #252b42;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-breadcrumb span {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+/* =========================================
+   PRODUCT AREA
+========================================= */
+
+.product-detail {
+  background: #fff;
+  padding: 5px 0 70px;
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+/* =========================================
+   LEFT IMAGE
+========================================= */
+
+.product-gallery {
+  width: 100%;
+}
+
+.product-main-image {
+  width: 100%;
+  height: 430px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+
+.product-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Küçük resim */
+.product-thumbnail {
+  width: 75px;
+  height: 75px;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  background: #f5f5f5;
+}
+
+.product-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================
+   RIGHT PRODUCT INFO
+========================================= */
+
+.product-info {
+  padding-top: 5px;
+}
+
+.product-info h1 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #252b42;
+}
+
+/* Rating */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.product-rating span:first-child {
+  color: #fbc02d;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.product-rating span:last-child {
+  color: #737373;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Fiyat */
+.product-info h2 {
+  margin: 0 0 15px;
+  color: #252b42;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Stok */
+.availability {
+  margin: 0 0 25px;
+  color: #737373;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.availability strong {
+  color: #23a6f0;
+}
+
+/* Açıklama */
+.product-description {
+  max-width: 480px;
+  margin: 0 0 25px;
+  color: #737373;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Çizgi */
+.product-info hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 0 0 25px;
+}
+
+/* =========================================
+   COLORS
+========================================= */
+
+.detail-colors {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.detail-color {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.detail-color.blue {
+  background: #23a6f0;
+}
+
+.detail-color.green {
+  background: #23856d;
+}
+
+.detail-color.orange {
+  background: #e77c40;
+}
+
+.detail-color.dark {
+  background: #252b42;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.select-options {
+  height: 44px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 4px;
+  background: #23a6f0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.icon-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  background: #fff;
+  color: #252b42;
+  font-size: 18px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  border-color: #23a6f0;
+  color: #23a6f0;
+}
+
+/* =========================================
+   TABS
+========================================= */
+
+.product-tabs {
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 25px 0 70px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 45px;
+}
+
+.tabs span {
+  color: #737373;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tabs span:first-child {
+  color: #252b42;
+}
+
+.tabs b {
+  color: #23a6f0;
+}
+
+/* =========================================
+   DESCRIPTION AREA
+========================================= */
+
+.product-description-content {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* Alt görsel */
+.description-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.description-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Açıklama */
+.description-text h2,
+.description-list h2 {
+  margin: 0 0 18px;
+  color: #252b42;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.description-text p {
+  margin: 0 0 18px;
+  color: #737373;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Liste */
+.description-list p {
+  margin: 0 0 10px;
+  color: #737373;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.description-list h2:nth-of-type(2) {
+  margin-top: 30px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .product-container {
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 850px) {
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .product-main-image {
+    height: 450px;
+  }
+
+  .product-description-content {
+    grid-template-columns: 1fr;
+  }
+
+  .description-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-container {
+    max-width: calc(100% - 40px);
+  }
+
+  .product-breadcrumb {
+    padding: 18px 0;
+  }
+
+  .product-detail {
+    padding-bottom: 45px;
+  }
+
+  .product-main-image {
+    height: 350px;
+  }
+
+  .product-info h1 {
+    font-size: 22px;
+  }
+
+  .product-info h2 {
+    font-size: 22px;
+  }
+
+  .tabs {
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .tabs span {
+    font-size: 11px;
+  }
+
+  .description-image {
+    height: 300px;
+  }
+}

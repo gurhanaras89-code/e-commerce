@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
+
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import Logos from "../../layouts/Logos";
 import "./Shop.css";
 
 
@@ -30,154 +33,124 @@ function Shop() {
   return (
     <>
       <Header />
-    <main className="shop-page">
+      <main className="shop-page">
 
-      {/* SHOP HEADER */}
-      <section className="shop-heading">
-        <div className="shop-container">
-          <h1>Shop</h1>
+        {/* SHOP HEADER */}
+        <section className="shop-heading">
+          <div className="shop-container">
+            <h1>Shop</h1>
 
-          <div className="breadcrumb">
-            <span>Home</span>
-            <span>›</span>
-            <span>Shop</span>
-          </div>
-        </div>
-      </section>
-
-      {/* CATEGORIES */}
-      <section className="shop-categories">
-        <div className="shop-container category-grid">
-
-          {categories.map((category, index) => (
-            <div className="category-card" key={index}>
-              <img src={category.image} alt={category.title} />
-
-              <div className="category-overlay">
-                <h3>{category.title}</h3>
-                <span>{category.items}</span>
-              </div>
+            <div className="breadcrumb">
+              <span>Home</span>
+              <span>›</span>
+              <span>Shop</span>
             </div>
-          ))}
-
-        </div>
-      </section>
-
-      {/* PRODUCTS TOOLBAR */}
-      <section className="shop-toolbar">
-        <div className="shop-container toolbar-inner">
-
-          <p>Showing all 12 results</p>
-
-          <div className="view-options">
-            <span>Views:</span>
-            <button className="view-button active">▦</button>
-            <button className="view-button">☷</button>
           </div>
+        </section>
 
-          <div className="shop-actions">
-            <select defaultValue="Popularity">
-              <option>Popularity</option>
-              <option>Newest</option>
-              <option>Price Low</option>
-              <option>Price High</option>
-            </select>
+        {/* CATEGORIES */}
+        <section className="shop-categories">
+          <div className="shop-container category-grid">
 
-            <button className="filter-button">
-              Filter
-            </button>
+            {categories.map((category, index) => (
+              <div className="category-card" key={index}>
+                <img src={category.image} alt={category.title} />
+
+                <div className="category-overlay">
+                  <h3>{category.title}</h3>
+                  <span>{category.items}</span>
+                </div>
+              </div>
+            ))}
+
           </div>
+        </section>
 
-        </div>
-      </section>
+        {/* PRODUCTS TOOLBAR */}
+        <section className="shop-toolbar">
+          <div className="shop-container toolbar-inner">
 
-      {/* PRODUCTS */}
-      <section className="products-section">
-        <div className="shop-container product-grid">
+            <p>Showing all 12 results</p>
 
-          {products.map((product, index) => (
-            <article className="product-card" key={product}>
+            <div className="view-options">
+              <span>Views:</span>
+              <button className="view-button active">▦</button>
+              <button className="view-button">☷</button>
+            </div>
 
-              <div className="product-image">
-                <img
-                  src={`/src/assets/images/${product}`}
-                  alt={`Product ${index + 1}`}
-                />
-              </div>
+            <div className="shop-actions">
+              <select defaultValue="Popularity">
+                <option>Popularity</option>
+                <option>Newest</option>
+                <option>Price Low</option>
+                <option>Price High</option>
+              </select>
 
-              <h3>Graphic Design</h3>
+              <button className="filter-button">
+                Filter
+              </button>
+            </div>
 
-              <p className="product-department">
-                English Department
-              </p>
+          </div>
+        </section>
 
-              <div className="product-price">
-                <span className="old-price">$16.48</span>
-                <span className="new-price">$6.48</span>
-              </div>
+        {/* PRODUCTS */}
+        <section className="products-section">
+          <div className="shop-container product-grid">
 
-              <div className="product-colors">
-                <span className="color blue"></span>
-                <span className="color green"></span>
-                <span className="color orange"></span>
-                <span className="color dark"></span>
-              </div>
+            {products.map((product, index) => (
+              <Link
+                to={`/product/${index + 1}`}
+                className="product-card"
+                key={product}
+              >
+                <div className="product-image">
+                  <img
+                    src={`/src/assets/images/${product}`}
+                    alt={`Product ${index + 1}`}
+                  />
+                </div>
 
-            </article>
-          ))}
+                <h3>Graphic Design</h3>
 
-        </div>
-      </section>
+                <p className="product-department">
+                  English Department
+                </p>
 
-      {/* PAGINATION */}
-      <section className="pagination-section">
-        <div className="pagination">
+                <div className="product-price">
+                  <span className="old-price">$16.48</span>
+                  <span className="new-price">$6.48</span>
+                </div>
 
-          <button disabled>First</button>
-          <button>1</button>
-          <button className="current">2</button>
-          <button>3</button>
-          <button>Next</button>
+                <div className="product-colors">
+                  <span className="color blue"></span>
+                  <span className="color green"></span>
+                  <span className="color orange"></span>
+                  <span className="color dark"></span>
+                </div>
+              </Link>
+            ))}
 
-        </div>
-      </section>
+          </div>
+        </section>
 
- {/* BRANDS */}
-<section className="brands-section">
-  <div className="shop-container brands">
+        {/* PAGINATION */}
+        <section className="pagination-section">
+          <div className="pagination">
 
-    <div className="brand brand-hooli">
-      <span>Hooli</span>
-    </div>
+            <button disabled>First</button>
+            <button>1</button>
+            <button className="current">2</button>
+            <button>3</button>
+            <button>Next</button>
 
-    <div className="brand brand-lyft">
-      <span>lyft</span>
-    </div>
+          </div>
+        </section>
 
-    <div className="brand brand-bird">
-      <span className="bird-wing">◢</span>
-      <span className="bird-wing bird-wing-2">◣</span>
-    </div>
 
-    <div className="brand brand-stripe">
-      <span>stripe</span>
-    </div>
-
-    <div className="brand brand-aws">
-      <span>aws</span>
-      <small>⌒</small>
-    </div>
-
-    <div className="brand brand-reddit">
-      <span className="reddit-dot">●</span>
-      reddit
-    </div>
-
-  </div>
-</section>
-
-    </main> 
-    <Footer />
+      </main>
+      <Logos />
+      <Footer />
     </>
   );
 }
