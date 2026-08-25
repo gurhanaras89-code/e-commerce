@@ -26,15 +26,15 @@ function Navbar() {
         {/* MENU */}
         <ul className="hidden lg:flex items-center gap-6 text-[14px] font-semibold text-[#737373]">
           <li className="cursor-pointer hover:text-[#23A6F0]">
-  <Link to="/">Home</Link>
-</li>
+            <Link to="/">Home</Link>
+          </li>
 
           <li className="flex items-center gap-2 cursor-pointer hover:text-[#23A6F0]">
-  <Link to="/shop" className="flex items-center gap-2">
-    Shop
-    <FaChevronDown size={10} />
-  </Link>
-</li>
+            <Link to="/shop" className="flex items-center gap-2">
+              Shop
+              <FaChevronDown size={10} />
+            </Link>
+          </li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
             About
@@ -45,7 +45,7 @@ function Navbar() {
           </li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
-            Contact
+            <Link to="/contact">Contact</Link>
           </li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
