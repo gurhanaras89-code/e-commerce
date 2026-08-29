@@ -24,7 +24,7 @@ function Navbar() {
         </h1>
 
         {/* MENU */}
-        <ul className="hidden lg:flex items-center gap-6 text-[14px] font-semibold text-[#737373]">
+        <ul className="flex items-center gap-3 md:gap-5 lg:gap-6 text-[12px] md:text-[13px] lg:text-[14px] font-semibold text-[#737373] whitespace-nowrap">
           <li className="cursor-pointer hover:text-[#23A6F0]">
             <Link to="/">Home</Link>
           </li>
@@ -37,7 +37,7 @@ function Navbar() {
           </li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
-            About
+            <Link to="/about">About</Link>
           </li>
 
           <li className="cursor-pointer hover:text-[#252B42]">
@@ -48,8 +48,8 @@ function Navbar() {
             <Link to="/contact">Contact</Link>
           </li>
 
-          <li className="cursor-pointer hover:text-[#252B42]">
-            Pages
+          <li className="cursor-pointer hover:text-[#23A6F0]">
+            <Link to="/team">Team</Link>
           </li>
         </ul>
 

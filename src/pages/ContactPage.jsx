@@ -2,6 +2,12 @@ import Header from "../layouts/Header";
 import Logos from "../layouts/Logos";
 import Footer from "../layouts/Footer";
 import "./ContactPage.css";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 function ContactPage() {
   return (
@@ -24,78 +30,35 @@ function ContactPage() {
               </p>
 
               <button className="contact-button">
-                CONTACT US
+                CONTACT OUR COMPANY
               </button>
             </div>
 
           </div>
         </section>
 
-        {/* LOCATIONS */}
-        <section className="contact-locations">
-          <div className="contact-container">
-
-            <h2>Get In Touch</h2>
-
-            <div className="locations-grid">
-
-              <div className="location-card">
-                <h3>Paris</h3>
-                <p>1901 Thorn ridge Cir.</p>
-                <p>75000 Paris</p>
-                <p>Phone: +451 215 215</p>
-                <p>Fax: +451 215 215</p>
-              </div>
-
-              <div className="location-card">
-                <h3>New York</h3>
-                <p>2715 Ash Dr. San Jose.</p>
-                <p>75000 Paris</p>
-                <p>Phone: +451 215 215</p>
-                <p>Fax: +451 215 215</p>
-              </div>
-
-              <div className="location-card">
-                <h3>Berlin</h3>
-                <p>4140 Parker Rd.</p>
-                <p>75000 Paris</p>
-                <p>Phone: +451 215 215</p>
-                <p>Fax: +451 215 215</p>
-              </div>
-
-              <div className="location-card">
-                <h3>London</h3>
-                <p>3517 W. Gray St. Utica.</p>
-                <p>75000 Paris</p>
-                <p>Phone: +451 215 215</p>
-                <p>Fax: +451 215 215</p>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
+        
 
         {/* SOCIAL */}
         <section className="contact-social">
           <div className="contact-container">
 
             <h2>Follow Us</h2>
-
             <div className="social-icons">
-              <span>♥</span>
-              <span>f</span>
-              <span>◎</span>
-              <span>in</span>
+              <FaTwitter />
+              <FaFacebookF />
+              <FaInstagram />
+              <FaLinkedinIn />
             </div>
+
+
 
           </div>
         </section>
 
       </main>
 
-      <Logos />
-      <Footer />
+    
     </>
   );
 }

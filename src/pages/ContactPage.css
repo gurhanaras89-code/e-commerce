@@ -78,15 +78,28 @@
 
 .contact-social h2 {
   color: #252b42;
+  font-size: 24px;
+  margin-bottom: 25px;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  align-items: center;
+  gap: 22px;
   color: #23a6f0;
-  font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
+}
+
+.social-icons svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.social-icons svg:hover {
+  transform: translateY(-2px);
 }
 
 /* MOBILE */
