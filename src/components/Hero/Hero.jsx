@@ -1,6 +1,30 @@
+import { useState } from "react";
+
 import heroImage from "../../assets/images/hero.png";
+import heroImage1 from "../../assets/images/hero1.png";
+
 
 function Hero() {
+  const slides = [
+    heroImage,
+    heroImage1,
+    
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const previousSlide = () => {
+    setCurrentSlide((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) =>
+      prev === slides.length - 1 ? 0 : prev + 1
+    );
+  };
+
   return (
     <section
       style={{
@@ -10,9 +34,9 @@ function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Figma'daki HERO görselinin tamamı */}
+      {/* HERO FOTOĞRAFI */}
       <img
-        src={heroImage}
+        src={slides[currentSlide]}
         alt="New Collection"
         style={{
           position: "absolute",
@@ -21,6 +45,7 @@ function Hero() {
           height: "100%",
           objectFit: "fill",
           zIndex: 0,
+          transition: "opacity 0.3s ease",
         }}
       />
 
@@ -35,6 +60,8 @@ function Hero() {
           margin: "0 auto",
           display: "flex",
           alignItems: "center",
+          padding: "0 20px",
+          boxSizing: "border-box",
         }}
       >
         <div
@@ -100,16 +127,25 @@ function Hero() {
 
       {/* SOL OK */}
       <button
+        onClick={previousSlide}
+        aria-label="Previous slide"
         style={{
           position: "absolute",
           left: "28px",
           top: "50%",
           transform: "translateY(-50%)",
           zIndex: 3,
+          width: "55px",
+          height: "55px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           background: "transparent",
-          border: "none",
+          border: "2px solid #fff",
+          borderRadius: "50%",
           color: "#fff",
-          fontSize: "52px",
+          fontSize: "42px",
+          lineHeight: "1",
           cursor: "pointer",
         }}
       >
@@ -118,16 +154,25 @@ function Hero() {
 
       {/* SAĞ OK */}
       <button
+        onClick={nextSlide}
+        aria-label="Next slide"
         style={{
           position: "absolute",
           right: "28px",
           top: "50%",
           transform: "translateY(-50%)",
           zIndex: 3,
+          width: "55px",
+          height: "55px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           background: "transparent",
-          border: "none",
+          border: "2px solid #fff",
+          borderRadius: "50%",
           color: "#fff",
-          fontSize: "52px",
+          fontSize: "42px",
+          lineHeight: "1",
           cursor: "pointer",
         }}
       >
@@ -146,21 +191,24 @@ function Hero() {
           gap: "8px",
         }}
       >
-        <span
-          style={{
-            width: "50px",
-            height: "4px",
-            backgroundColor: "#fff",
-          }}
-        />
-
-        <span
-          style={{
-            width: "50px",
-            height: "4px",
-            backgroundColor: "rgba(255,255,255,0.5)",
-          }}
-        />
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+            style={{
+              width: "50px",
+              height: "4px",
+              padding: 0,
+              border: "none",
+              backgroundColor:
+                currentSlide === index
+                  ? "#fff"
+                  : "rgba(255,255,255,0.5)",
+              cursor: "pointer",
+            }}
+          />
+        ))}
       </div>
     </section>
   );

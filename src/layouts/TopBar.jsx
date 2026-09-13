@@ -14,7 +14,7 @@ function TopBar() {
       <div
         className="flex h-14 w-full items-center justify-between text-sm"
         style={{
-          maxWidth: "1280px",
+          maxWidth: "1050px",
           margin: "0 auto",
         }}
       >
