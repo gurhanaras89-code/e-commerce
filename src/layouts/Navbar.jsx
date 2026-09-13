@@ -6,8 +6,11 @@ import {
 } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import Gravatar from "react-gravatar";
 
 function Navbar() {
+  const user = useSelector((state) => state.client.user);
   return (
     <nav className="bg-white">
       <div
@@ -57,13 +60,12 @@ function Navbar() {
         <div className="flex items-center gap-5 text-[#23A6F0]">
 
           {/* LOGIN / REGISTER */}
-          <div className="flex items-center gap-2 cursor-pointer">
-            <FaUser size={15} />
-
-            <span className="text-[14px] font-semibold whitespace-nowrap">
-              Login / Register
-            </span>
-          </div>
+          {user.email ? (
+            <div className="flex items-center gap-2" title={user.email}>
+              <Gravatar email={user.email} size={26} default="mp" className="rounded-full" />
+              <span className="text-[14px] font-semibold whitespace-nowrap">{user.email}</span>
+            </div>
+          ) : <Link to="/login" className="flex items-center gap-2 cursor-pointer"><FaUser size={15} /><span className="text-[14px] font-semibold whitespace-nowrap">Login / Register</span></Link>}
 
           {/* SEARCH */}
           <FaSearch
